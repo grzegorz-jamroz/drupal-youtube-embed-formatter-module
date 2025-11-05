@@ -1,0 +1,36 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: youtube-embed-formatter-drupal-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
+#    volumes:
+#      - ./docker/db:/var/lib/mysql
+    networks:
+      - youtube-embed-formatter-drupal-network
+
+  app:
+    environment:
+      - PHP_IDE_CONFIG=serverName=app
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: youtube-embed-formatter-drupal-app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./composer.json:/var/www/html/custom/module/youtube-embed-formatter/composer.json
+      - ./youtube_embed_formatter.info.yml:/var/www/html/custom/module/youtube-embed-formatter/youtube_embed_formatter.info.yml
+#      - ./docker/drupal:/var/www/html/web/sites
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - db
+    networks:
+      - youtube-embed-formatter-drupal-network
+
+networks:
+  youtube-embed-formatter-drupal-network:
