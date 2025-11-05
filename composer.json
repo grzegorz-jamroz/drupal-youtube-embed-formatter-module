@@ -1,0 +1,17 @@
+{
+  "name": "grzegorz-jamroz/drupal-youtube-embed-formatter-module",
+  "description": "Module provides a field formatter to display a YouTube video from a url or video ID",
+  "type": "drupal-custom-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Grzegorz Jamróz",
+      "email": "grzegorz.jamrooz@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.4",
+    "grzegorz-jamroz/plain-data-transformer": "^1.0"
+  }
+}

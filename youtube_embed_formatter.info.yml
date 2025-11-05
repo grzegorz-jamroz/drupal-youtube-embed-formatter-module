@@ -1,0 +1,5 @@
+name: YouTube Embed Formatter
+type: module
+description: Module provides a field formatter to display a YouTube video from a url or video ID.
+package: Custom
+core_version_requirement: ^11
