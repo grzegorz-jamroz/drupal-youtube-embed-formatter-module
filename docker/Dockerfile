@@ -55,8 +55,6 @@ RUN a2enmod rewrite
 COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-COPY ./docker/youtube_embed_formatter_data.php /var/www/html/web/youtube_embed_formatter_data.php
-
 RUN mkdir -p "/var/www/html/custom/module/youtube-embed-formatter"
 #COPY ./config /var/www/html/custom/module/youtube-embed-formatter/config
 #COPY ./src /var/www/html/custom/module/youtube-embed-formatter/src
