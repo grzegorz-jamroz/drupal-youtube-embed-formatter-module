@@ -59,7 +59,7 @@ final class AddYoutubeVideoFieldToArticleCommands extends DrushCommands
     if ($form_display) {
       $form_display->setComponent('field_youtube_video', [
         'type' => 'string_textfield',
-        'weight' => 121,
+        'weight' => 3,
         'settings' => [
           'size' => 60,
           'placeholder' => '',
@@ -72,8 +72,8 @@ final class AddYoutubeVideoFieldToArticleCommands extends DrushCommands
     if ($view_display) {
       $view_display->setComponent('field_youtube_video', [
         'type' => 'youtube_embed',
-        'label' => 'above',
-        'weight' => 111,
+        'label' => 'hidden',
+        'weight' => 2,
         'settings' => [
           'controls' => '1',
           'privacy_mode' => 0,
