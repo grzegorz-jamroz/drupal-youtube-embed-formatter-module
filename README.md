@@ -25,7 +25,7 @@
     docker compose up -d
     ```
 
-2.  Visit http://localhost:8080/node/1
+2.  Visit http://localhost:8080/node/1 *(demo credentials: admin/admin)*
 
     ![Configuration](docs/assets/demo.png "Demo")
 
