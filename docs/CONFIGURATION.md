@@ -1,4 +1,4 @@
-## Usage and Configuration
+# Configuration
 
 1.  After enabling the module, navigate to the configuration page at `Manage > Structure > Content types` (`/admin/structure/types`) and select "Manage fields" for a desired content type (e.g., Article).
 
@@ -21,4 +21,5 @@
     -   **Enable Privacy-Enhanced Mode:** Choose whether to use YouTube's privacy-enhanced mode (no cookies).
 
     ![Configuration](assets/configuration-7.png "Configuration")
+
 6. Save the settings.

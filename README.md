@@ -14,7 +14,8 @@
 - [Run demo with Docker](#run-demo-with-Docker)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage and Configuration](#usage-and-configuration)
+- [Configuration](#configuration)
+- [Usage](#usage)
 - [Development with Docker](#development-with-docker)
 
 
@@ -79,9 +80,18 @@
 
 ---
 
-## Usage and Configuration
+## Configuration
 
-Detailed usage and configuration instructions with screenshots can be found [here](docs/USAGE_AND_CONFIGURATION.md)
+Detailed configuration instructions with screenshots can be found [here](docs/CONFIGURATION.md)
+
+---
+
+## Usage
+
+When you configured you Content Type field to use the "Responsive YouTube Embed" formatter, you can add content by providing either a full YouTube URL or just the video ID in the corresponding field.\
+
+![Configuration](docs/assets/usage-1.png "Usage")
+![Configuration](docs/assets/usage-2.png "Usage")
 
 ---
 
