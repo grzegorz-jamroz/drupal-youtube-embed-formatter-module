@@ -14,7 +14,7 @@
 - [Run demo with Docker](#run-demo-with-Docker)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Configuration](#configuration)
+- [Usage and Configuration](#usage-and-configuration)
 - [Development with Docker](#development-with-docker)
 
 
@@ -26,6 +26,8 @@
     ```
 
 2.  Visit http://localhost:8080/node/1
+
+    ![Configuration](docs/assets/demo.png "Demo")
 
 ---
 
@@ -74,6 +76,12 @@
     *   Navigate to the "Extend" page (`/admin/modules`).
     *   Find "YouTube Embed Formatter" in the list and check the box.
     *   Scroll to the bottom and click "Install".
+
+---
+
+## Usage and Configuration
+
+Detailed usage and configuration instructions with screenshots can be found [here](docs/USAGE_AND_CONFIGURATION.md)
 
 ---
 
