@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the YouTube embed formatter.
+ */
+#}
+{% if iframe_url %}
+  {% block youtube_embed_wrapper %}
+    <div class="youtube-embed-wrapper">
+      {% block youtube_embed_iframe %}
+        <iframe
+          src="{{ iframe_url }}"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="{% block youtube_embed_title %}Embedded YouTube video: {{ video_id }}{% endblock %}">
+        </iframe>
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endif %}

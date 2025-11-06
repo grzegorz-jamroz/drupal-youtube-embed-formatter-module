@@ -4,6 +4,7 @@
 set -e
 
 SITE_PATH="web/sites/default"
+MODULE_PATH="custom/module/youtube-embed-formatter"
 
 # 1. Wait for the database to be ready
 echo "Waiting for database..."
@@ -72,6 +73,15 @@ echo "YouTube Embed Formatter Module enabled."
 
 # 6. Add youtube_embed_formatter to a Article content type display
 echo "Configuring Article content type to use YouTube Embed Formatter..."
+
+if [ ! -f "${MODULE_PATH}/Drush/Commands/CreateDemoArticleCommands.php" ]; then
+  drush cr
+  drush demo:add-youtube-video-field-to-article
+  drush demo:create-demo-article
+  rm -rf "${MODULE_PATH}/Drush"
+  drush cr
+fi
+
 echo "Article content type configured."
 
 # 7. Set correct permissions for the files directory

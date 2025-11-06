@@ -56,11 +56,13 @@ COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 RUN mkdir -p "/var/www/html/custom/module/youtube-embed-formatter"
-#COPY ./config /var/www/html/custom/module/youtube-embed-formatter/config
-#COPY ./src /var/www/html/custom/module/youtube-embed-formatter/src
-#COPY ./templates /var/www/html/custom/module/youtube-embed-formatter/templates
+COPY ./src /var/www/html/custom/module/youtube-embed-formatter/src
+COPY ./templates /var/www/html/custom/module/youtube-embed-formatter/templates
 COPY ./composer.json /var/www/html/custom/module/youtube-embed-formatter/composer.json
 COPY ./youtube_embed_formatter.info.yml /var/www/html/custom/module/youtube-embed-formatter/youtube_embed_formatter.info.yml
+COPY ./docker/CreateDemoArticleCommands.php /var/www/html/custom/module/youtube-embed-formatter/src/Drush/Commands/CreateDemoArticleCommands.php
+COPY ./docker/AddYoutubeVideoFieldToArticleCommands.php /var/www/html/custom/module/youtube-embed-formatter/src/Drush/Commands/AddYoutubeVideoFieldToArticleCommands.php
+
 RUN sudo chown -R 1000:1000 /var/www/html
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
